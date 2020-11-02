@@ -143,8 +143,8 @@ separate the production and development specific bits out, also maintain a "comm
     |- ContentMain.jsx
     |- index.js
     |- index.html
-  -|- /node_modules
-  -|- .babelrc
+ - |- /node_modules
+ - |- .babelrc
 
 
   webpack.common.js
