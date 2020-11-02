@@ -1,12 +1,12 @@
-Transform JSX using webpack and babel
+# Transform JSX using webpack and babel
 
-# Initialize the project and Create a package.json file by running following command in terminal
+- Initialize the project and Create a package.json file by running following command in terminal
 
-npm init -y
+# npm init -y
 
-# Setting up Webpack
+- Setting up Webpack
 
-npm install --save-dev webpack webpack-cli webpack-dev-server
+# npm install --save-dev webpack webpack-cli webpack-dev-server
 
 After installing these two packages, you will notice a new addition to our project, the node_modules and devDependencies section in our package.json file.
 
@@ -18,11 +18,11 @@ add the webpack  into the package.json file inside scripts.
     "build": "webpack --config webpack.prod.js --mode=production"
 }
 
- Note: webpack.config.js file is splitted into webpack.common.js, webpack.dev.js,webpack.prod.js refer # # Development and Production Setup
+ Note: webpack.config.js file is splitted into webpack.common.js, webpack.dev.js,webpack.prod.js refer #Development and Production Setup
 
-# Setting up Babel
+- Setting up Babel
 
-install  --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
+# install  --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
 
 We also need to set up our Babel config file, create a new file in the root directory called .babelrc, and write the following configuration to it:
 
@@ -31,13 +31,13 @@ We also need to set up our Babel config file, create a new file in the root dire
   }
 
 
-# Install other required dependencies
+- Install other required dependencies
 
-npm install --save react react-dom   
+# npm install --save react react-dom   
 
 (add other required dependencies)
 
-# Create a webpack.config.js file in the root directory and write the following configuration for it:
+- Create a webpack.config.js file in the root directory and write the following configuration for it:
 
 module.exports = {
     entry: {
@@ -63,11 +63,11 @@ module.exports = {
  }
 };
 
-For every file with a .js or .jsx extension, excluding the node_modules folder and its content, Webpack uses babel-loader to transpile the ES6 code to ES5.
+ For every file with a .js or .jsx extension, excluding the node_modules folder and its content, Webpack uses babel-loader to transpile the ES6 code to ES5.
 
-#  To handle any .css  install css loader and  install html loader - Exports HTML as string. HTML is minimized when the compiler demands.  
+- To handle any .css  install css loader and  install html loader - Exports HTML as string. HTML is minimized when the compiler demands.  
 
-npm install --save-dev html-loader css-loader 
+# npm install --save-dev html-loader css-loader 
 
 module.exports = {
   module: {
@@ -84,9 +84,9 @@ module.exports = {
   }
 };
 
-# Install HTML Webpack Plugin - Plugin that simplifies creation of HTML files to serve our bundles and MiniCssExtractPlugin- This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. 
+- Install HTML Webpack Plugin - Plugin that simplifies creation of HTML files to serve our bundles and MiniCssExtractPlugin- This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. 
 
-npm install --save-dev html-webpack-plugin 
+# npm install --save-dev html-webpack-plugin 
 
 --usage--
 webpack.config.js
@@ -107,7 +107,7 @@ module.exports = {
  })]
 };
 
-npm install --save-dev mini-css-extract-plugin
+# npm install --save-dev mini-css-extract-plugin
 --usage--
 webpack.config.js
 
@@ -125,11 +125,11 @@ module.exports = {
   }
 };
 
-# Development and Production Setup
+- Development and Production Setup
 
 separate the production and development specific bits out, also maintain a "common" configuration to keep things DRY. In order to merge these configurations together,  use a utility called webpack-merge
 
-npm install --save-dev webpack-merge
+# npm install --save-dev webpack-merge
 
   conversion-jsx
   |- package.json
@@ -244,7 +244,7 @@ module.exports = merge(common,  {
 });
 
   
-# Minification
+- Minification
 
 webpack v4+ will minify our code by default in production mode.
 
@@ -265,7 +265,7 @@ module.exports = {
 
 CssMinimizerWebpackPlugin - This plugin uses cssnano to optimize and minify our CSS.
 
-npm install css-minimizer-webpack-plugin --save-dev
+# npm install css-minimizer-webpack-plugin --save-dev
 
 onst MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -287,15 +287,14 @@ module.exports = {
   }
 };
 
-# To create  a build directory with a production build 
+- To create  a build directory with a production build 
 
-npm run build
+# npm run build
 
 
-### `npm start`
+# npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.
 
 
 
