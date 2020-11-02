@@ -8,7 +8,7 @@
 
  npm install --save-dev webpack webpack-cli webpack-dev-server
 
-After installing these two packages, you will notice a new addition to our project, the node_modules and devDependencies section in our package.json file.
+After installing these two packages, there is a new addition to our project, the node_modules and devDependencies section in our package.json file.
 
 add the webpack  into the package.json file inside scripts.
 
@@ -133,18 +133,18 @@ separate the production and development specific bits out, also maintain a "comm
 
   conversion-jsx
   |- package.json
- - |- webpack.config.js
- + |- webpack.common.js
- + |- webpack.dev.js
- + |- webpack.prod.js
- |- /build
-  |- /src
+ - [-]|- webpack.config.js
+ - [+]|- webpack.common.js
+ - [+]|- webpack.dev.js
+ - [+]|- webpack.prod.js
+ - |- /build
+ - |- /src
     |- CodeTest.jsx
     |- ContentMain.jsx
     |- index.js
     |- index.html
-  |- /node_modules
-  |- .babelrc
+  -|- /node_modules
+  -|- .babelrc
 
 
   webpack.common.js
